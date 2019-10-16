@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="30dp"
+        android:gravity="center">
+
+        <RelativeLayout
+            android:layout_width="100dp"
+            android:layout_height="2dp"
+            android:id="@+id/line_money"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:visibility="invisible"
+            android:background="#000"></RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:paddingRight="10dp"
+            android:paddingLeft="10dp"
+
+            android:orientation="horizontal">
+
+            <Switch
+                android:layout_width="0sp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:id="@+id/switch_money"
+                android:checked="true"/>
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_weight="1.2"
+                android:id="@+id/img_money"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_attach_money_black_40dp"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1.7"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:id="@+id/text_money"
+                android:textColor="#000"
+                android:textSize="20sp"
+                android:text="Money  : "/>
+
+            <EditText
+                android:layout_width="0dp"
+                android:layout_weight="1.5"
+                android:layout_height="50dp"
+                android:id="@+id/edit_money"
+                android:inputType="number"
+                android:background="@drawable/background_edittext_gamepad"
+                android:layout_marginLeft="20dp"
+                android:maxLength="10"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:hint="toman"
+                android:textColor="#000"/>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="30dp"
+        android:gravity="center">
+
+    <RelativeLayout
+        android:layout_width="100dp"
+        android:layout_height="2dp"
+        android:id="@+id/line_timer"
+        android:layout_centerVertical="true"
+       android:layout_centerHorizontal="true"
+        android:background="#000"></RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+
+            android:orientation="horizontal">
+
+            <Switch
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:id="@+id/switch_timer"
+                android:checked="false"/>
+
+            <ImageView
+                android:layout_width="0dp"
+                android:id="@+id/timer_img"
+                android:layout_weight="1.2"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_timer_off_black_40dp"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.7"
+                android:id="@+id/timer_text"
+                android:layout_gravity="center"
+                android:textColor="#000"
+                android:textSize="20sp"
+                android:text="Time     : "/>
+
+            <EditText
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_weight="1.5"
+                android:id="@+id/timer_edittext"
+                android:inputType="number"
+                android:background="@drawable/background_edittext_gamepad"
+                android:layout_marginLeft="20dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:maxLength="5"
+                android:hint="Minute"
+                android:textColor="#000"/>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+
+
+
+
+</LinearLayout>
