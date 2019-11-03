@@ -1,7 +1,9 @@
 package com.western.game.center.westerngamecenter.Fragments.User_Activities.Add_New_User.Search_User.Active_dialog_fragment;
 
-import android.support.v4.view.ViewPager;
+
 import android.view.View;
+
+import androidx.viewpager.widget.ViewPager;
 
 /**
  * Created by AvaNikan-PC-003 on 11/1/2017.

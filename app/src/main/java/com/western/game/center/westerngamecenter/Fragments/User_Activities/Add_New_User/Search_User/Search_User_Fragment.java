@@ -29,6 +29,7 @@ import androidx.annotation.Nullable;
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.SearchView;
 import androidx.appcompat.widget.Toolbar;
 import androidx.cardview.widget.CardView;
 import androidx.core.internal.view.SupportMenuItem;
@@ -231,7 +232,7 @@ public class Search_User_Fragment extends Fragment {
 
                             if (positionUser == position){
 
-                                    imageView_selected_user.setImageResource(R.mipmap.ic_logo_western);
+                                    imageView_selected_user.setImageResource(R.mipmap.ic_launcher);
                                     isLongClicked = false;
                                     change_toolbar(false);
                             }
@@ -277,18 +278,18 @@ public class Search_User_Fragment extends Fragment {
             MenuItem searchItem = menu.findItem(R.id.search);
             SupportMenuItem supportMenuItem = (SupportMenuItem) menu.findItem(R.id.search);
 
-            supportMenuItem.setSupportOnActionExpandListener(new MenuItem.OnActionExpandListener() {
-                @Override
-                public boolean onMenuItemActionExpand(MenuItem menuItem) {
-                    return true;
-                }
-
-                @Override
-                public boolean onMenuItemActionCollapse(MenuItem menuItem) {
-                    show_all_users();
-                    return true;
-                }
-            });
+//            supportMenuItem.setSupportOnActionExpandListener(new MenuItem.OnActionExpandListener() {
+//                @Override
+//                public boolean onMenuItemActionExpand(MenuItem menuItem) {
+//                    return true;
+//                }
+//
+//                @Override
+//                public boolean onMenuItemActionCollapse(MenuItem menuItem) {
+//                    show_all_users();
+//                    return true;
+//                }
+//            });
 
 //            MenuItemCompat.setOnActionExpandListener(searchItem , new MenuItemCompat.OnActionExpandListener() {
 //                @Override
@@ -318,9 +319,10 @@ public class Search_User_Fragment extends Fragment {
                     (SearchManager) getActivity().getSystemService(Context.SEARCH_SERVICE);
             SearchView searchView =
                     (SearchView) menu.findItem(R.id.search).getActionView();
-            searchView.setSearchableInfo(
-                    searchManager.getSearchableInfo(getActivity().getComponentName()));
-
+            if (searchManager != null) {
+                searchView.setSearchableInfo(
+                        searchManager.getSearchableInfo(getActivity().getComponentName()));
+            }
 
 
             searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
@@ -381,7 +383,7 @@ public class Search_User_Fragment extends Fragment {
                 db.Delete_User(userArrayList.get(positionUser));
                 userArrayList.remove(positionUser);
                 adapter.notifyItemRemoved(positionUser);
-                imageView_selected_user.setImageResource(R.mipmap.ic_logo_western);
+                imageView_selected_user.setImageResource(R.mipmap.ic_launcher);
                 isLongClicked = false;
                 change_toolbar(false);
 
@@ -521,7 +523,7 @@ public class Search_User_Fragment extends Fragment {
 
                     if (positionUser == position){
 
-                        imageView_selected_user.setImageResource(R.mipmap.ic_logo_western);
+                        imageView_selected_user.setImageResource(R.mipmap.ic_launcher);
                         isLongClicked = false;
                         change_toolbar(false);
                     }

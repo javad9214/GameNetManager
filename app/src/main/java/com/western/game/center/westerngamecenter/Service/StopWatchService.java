@@ -7,12 +7,11 @@ import android.content.Intent;
 import android.content.IntentFilter;
 import android.content.SharedPreferences;
 import android.os.IBinder;
-import android.support.annotation.IntDef;
-import android.support.v4.content.LocalBroadcastManager;
-import android.util.Log;
+
+import androidx.localbroadcastmanager.content.LocalBroadcastManager;
 
 import com.western.game.center.westerngamecenter.Tools.CountUpTimer;
-import com.western.game.center.westerngamecenter.User_Constant.ActiveUser;
+
 
 public class StopWatchService extends Service {
 

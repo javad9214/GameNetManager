@@ -3,7 +3,6 @@ package com.western.game.center.westerngamecenter.Fragments;
 
 import android.app.Activity;
 import android.app.ActivityManager;
-import android.app.Notification;
 import android.app.NotificationManager;
 import android.app.PendingIntent;
 import android.content.BroadcastReceiver;
@@ -13,9 +12,7 @@ import android.content.IntentFilter;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Color;
-import android.media.RingtoneManager;
 import android.net.Uri;
-import android.os.AsyncTask;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
@@ -36,11 +33,17 @@ import android.widget.RadioGroup;
 
 import androidx.annotation.Nullable;
 import androidx.annotation.RequiresApi;
+import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import androidx.core.app.NotificationCompat;
+import androidx.core.app.RemoteInput;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
+import androidx.localbroadcastmanager.content.LocalBroadcastManager;
+import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.geniusforapp.achievementunlocked.AchievementUnlocked;
@@ -369,9 +372,9 @@ public class Main_Active_User_Fragment extends Fragment implements  View.OnClick
     private void onFinish_notification (){
         NotificationCompat.Builder mBuilder = new NotificationCompat.Builder(getContext());
         Bitmap icon = BitmapFactory.decodeResource(getContext().getResources(),
-                R.mipmap.ic_logo_western);
+                R.mipmap.ic_launcher);
         mBuilder.setLargeIcon(icon);
-        mBuilder.setSmallIcon(R.mipmap.ic_logo_western , 5);
+        mBuilder.setSmallIcon(R.mipmap.ic_launcher , 5);
         mBuilder.setContentTitle("Times Up !!!!");
         mBuilder.setOngoing(false);
        // mBuilder.setLights(Color.RED, 1000, 1000);
@@ -381,7 +384,7 @@ public class Main_Active_User_Fragment extends Fragment implements  View.OnClick
         mBuilder.setContentText("TV Number " + " '5' " + "Is Finished ... !");
         mBuilder.setPriority(NotificationCompat.PRIORITY_MAX);
         mBuilder.setCategory(NotificationCompat.CATEGORY_ALARM);
-        mBuilder.mNotification.flags = Notification.FLAG_ONGOING_EVENT | Notification.FLAG_NO_CLEAR ;
+      //   mBuilder.mNotification.flags = Notification.FLAG_ONGOING_EVENT | Notification.FLAG_NO_CLEAR ;
         // mBuilder.setDefaults(NotificationCompat.DEFAULT_ALL);
         //mBuilder.setStyle(new NotificationCompat.InboxStyle());
        // mBuilder.setVibrate(pattern2);

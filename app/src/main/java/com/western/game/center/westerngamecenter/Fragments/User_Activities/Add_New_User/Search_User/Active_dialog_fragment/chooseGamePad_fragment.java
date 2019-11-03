@@ -2,10 +2,11 @@ package com.western.game.center.westerngamecenter.Fragments.User_Activities.Add_
 
 
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
+import androidx.fragment.app.Fragment;
 
 import com.western.game.center.westerngamecenter.R;
 

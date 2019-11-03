@@ -3,9 +3,11 @@ package com.western.game.center.westerngamecenter.Tools;
 import android.content.Context;
 import android.graphics.Paint;
 import android.graphics.Typeface;
-import android.support.v4.util.LruCache;
+
 import android.text.TextPaint;
 import android.text.style.MetricAffectingSpan;
+
+import androidx.collection.LruCache;
 
 public class TypefaceSpan extends MetricAffectingSpan {
     /** An <code>LruCache</code> for previously loaded typefaces. */

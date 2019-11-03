@@ -2,20 +2,19 @@ package com.western.game.center.westerngamecenter.Fragments.User_Activities.Add_
 
 
 import android.os.Bundle;
-import android.support.v4.app.DialogFragment;
-import android.support.v4.app.Fragment;
-import android.support.v7.widget.CardView;
-import android.util.Log;
+
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.ImageView;
+
 import android.widget.TextView;
+
+import androidx.fragment.app.DialogFragment;
 
 import com.western.game.center.westerngamecenter.App;
 import com.western.game.center.westerngamecenter.DataBase.DataBase_Operation;
-import com.western.game.center.westerngamecenter.Fragments.User_Activities.Add_New_User.Search_User.Active_dialog_fragment.Custom_dialog;
+
 import com.western.game.center.westerngamecenter.R;
 import com.western.game.center.westerngamecenter.User_Constant.Convert;
 import com.western.game.center.westerngamecenter.User_Constant.User;

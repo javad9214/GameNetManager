@@ -1,8 +1,8 @@
 package com.western.game.center.westerngamecenter.ActiveUsers;
 
 
-import android.support.annotation.Nullable;
-import android.support.v7.util.DiffUtil;
+import androidx.annotation.Nullable;
+import androidx.recyclerview.widget.DiffUtil;
 
 import com.western.game.center.westerngamecenter.User_Constant.ActiveUser;
 

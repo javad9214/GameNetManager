@@ -2,12 +2,13 @@ package com.western.game.center.westerngamecenter.Fragments.User_Activities.Add_
 
 
 import android.content.Context;
-import android.support.v4.app.FragmentActivity;
-import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+
+import androidx.fragment.app.FragmentActivity;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.western.game.center.westerngamecenter.R;
 import com.western.game.center.westerngamecenter.User_Constant.User;

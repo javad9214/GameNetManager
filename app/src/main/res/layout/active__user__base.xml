@@ -7,11 +7,10 @@
     tools:context="com.western.game.center.westerngamecenter.ActiveUsers.Active_User_Base">
 
 
-    <android.support.design.widget.CoordinatorLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:fitsSystemWindows="true"
-        android:id="@+id/placeholder"></android.support.design.widget.CoordinatorLayout>
+   <androidx.coordinatorlayout.widget.CoordinatorLayout
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+       android:id="@+id/placeholder"/>
 
 
 </RelativeLayout>

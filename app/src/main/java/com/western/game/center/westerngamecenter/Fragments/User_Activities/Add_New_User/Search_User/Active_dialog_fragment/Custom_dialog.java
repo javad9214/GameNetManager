@@ -2,11 +2,7 @@ package com.western.game.center.westerngamecenter.Fragments.User_Activities.Add_
 
 import android.os.Build;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
-import android.support.annotation.RequiresApi;
-import android.support.v4.app.DialogFragment;
-import android.support.v4.app.FragmentTransaction;
-import android.support.v4.view.ViewPager;
+
 import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -18,6 +14,12 @@ import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.Switch;
 import android.widget.TextView;
+
+import androidx.annotation.Nullable;
+import androidx.annotation.RequiresApi;
+import androidx.fragment.app.DialogFragment;
+import androidx.fragment.app.FragmentTransaction;
+import androidx.viewpager.widget.ViewPager;
 
 import com.western.game.center.westerngamecenter.App;
 import com.western.game.center.westerngamecenter.DataBase.DataBase_Operation;
@@ -34,7 +36,7 @@ import github.chenupt.springindicator.SpringIndicator;
 
 public class Custom_dialog extends DialogFragment implements View.OnClickListener  , View.OnKeyListener  {
 
-    ViewPager viewPager ;
+    private ViewPager viewPager ;
 
     boolean flag_fullName  = false ;
 

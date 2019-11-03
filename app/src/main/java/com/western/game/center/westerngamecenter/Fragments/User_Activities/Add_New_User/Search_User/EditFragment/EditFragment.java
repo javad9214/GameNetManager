@@ -2,21 +2,21 @@ package com.western.game.center.westerngamecenter.Fragments.User_Activities.Add_
 
 
 import android.os.Bundle;
-import android.support.v4.app.DialogFragment;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.animation.Animation;
-import android.view.animation.AnimationUtils;
+
 import android.widget.Button;
 import android.widget.EditText;
 
-import com.dd.morphingbutton.MorphingButton;
+
+import androidx.fragment.app.DialogFragment;
+
 import com.western.game.center.westerngamecenter.App;
 import com.western.game.center.westerngamecenter.DataBase.DataBase_Operation;
 import com.western.game.center.westerngamecenter.R;
-import com.western.game.center.westerngamecenter.User_Constant.Convert;
+
 import com.western.game.center.westerngamecenter.User_Constant.User;
 
 

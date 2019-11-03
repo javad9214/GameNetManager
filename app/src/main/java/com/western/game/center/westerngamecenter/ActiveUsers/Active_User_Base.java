@@ -1,10 +1,14 @@
 package com.western.game.center.westerngamecenter.ActiveUsers;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
+import android.provider.Settings;
 import android.text.Spannable;
 import android.text.SpannableString;
+import android.util.Log;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.Menu;
@@ -15,6 +19,7 @@ import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.annotation.Nullable;
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentTransaction;
@@ -41,6 +46,8 @@ public class Active_User_Base extends AppCompatActivity implements RadioGroup.On
 
     boolean doubleBackToExitPressedOnce = false;
 
+    public static int ACTION_MANAGE_OVERLAY_PERMISSION_REQUEST_CODE = 5469;
+
     ArrayList<ActiveUser> list ;
     ActiveUser activeUser ;
 
@@ -50,12 +57,29 @@ public class Active_User_Base extends AppCompatActivity implements RadioGroup.On
         super.onCreate(savedInstanceState);
         setContentView(R.layout.active__user__base);
 
+        checkPermission();
+
         final Window window = getWindow() ;
        // window.setStatusBarColor(Color.rgb(129 , 6 , 6));
         //window.setStatusBarColor(Color.TRANSPARENT);
 
         attachFragment();
 
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+
+        if (requestCode == ACTION_MANAGE_OVERLAY_PERMISSION_REQUEST_CODE) {
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+                if (!Settings.canDrawOverlays(this)) {
+                    // You don't have permission
+                    checkPermission();
+                }
+            }
+
+        }
     }
 
     public void attachFragment(){
@@ -142,6 +166,18 @@ public class Active_User_Base extends AppCompatActivity implements RadioGroup.On
         return s.toString() ;
     }
 
+
+    public void checkPermission() {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+            if (!Settings.canDrawOverlays(this)) {
+                Log.i(TAG, "checkPermission: ");
+
+                Intent intent = new Intent(Settings.ACTION_MANAGE_OVERLAY_PERMISSION,
+                        Uri.parse("package:" + getPackageName()));
+                startActivityForResult(intent, ACTION_MANAGE_OVERLAY_PERMISSION_REQUEST_CODE);
+            }
+        }
+    }
 
 
 }

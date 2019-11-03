@@ -3,23 +3,18 @@ package com.western.game.center.westerngamecenter.Fragments.User_Activities.Add_
 
 import android.graphics.Color;
 import android.os.Bundle;
-import android.support.v4.app.DialogFragment;
 import android.text.Editable;
 import android.text.TextWatcher;
-import android.util.Log;
-import android.view.Gravity;
-import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.animation.Animation;
-import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.FrameLayout;
-import android.widget.TextView;
-import android.widget.Toast;
+
+import androidx.fragment.app.DialogFragment;
 
 import com.geniusforapp.achievementunlocked.AchievementUnlocked;
 import com.geniusforapp.achievementunlocked.entity.AchievementData;
@@ -178,7 +173,7 @@ public class Add_user_dialog extends DialogFragment implements View.OnClickListe
                 user.Date = calendarTool.getIranianDate();
                 DataBase_Operation db = App.getDataBaseOperation();
                 db.addUser(user);
-                showAchievement();
+                //showAchievement();
                 list = new ArrayList<>();
                 activeUser = new ActiveUser();
                 list = db.Show_Active_user();
