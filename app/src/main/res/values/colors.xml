@@ -5,16 +5,16 @@
     <color name="colorAccent">#01579b</color>
     <color name="border_newuser_color">#8c1717</color>
 
-    <color name="mb_white">#ffffff</color>
-    <color name="mb_blue">#ff0099cc</color>
-    <color name="mb_blue_dark">#ff00719b</color>
-    <color name="mb_purple">#ffaa66cc</color>
-    <color name="mb_purple_dark">#ff8855aa</color>
-    <color name="mb_green">#ff99cc00</color>
-    <color name="mb_green_dark">#ff6d9b00</color>
-    <color name="mb_red">#ffff4444</color>
-    <color name="mb_red_dark">#ffcd3a3a</color>
-    <color name="mb_gray">#ffdedede</color>
+    <color name="white">#ffffff</color>
+    <color name="blue">#ff0099cc</color>
+    <color name="blue_dark">#ff00719b</color>
+    <color name="purple">#ffaa66cc</color>
+    <color name="purple_dark">#ff8855aa</color>
+    <color name="green">#ff99cc00</color>
+    <color name="green_dark">#ff6d9b00</color>
+    <color name="red">#ffff4444</color>
+    <color name="red_dark">#ffcd3a3a</color>
+    <color name="gray">#ffdedede</color>
 
     <color name="holo_blue_bright">#ff00ddff</color>
     <color name="holo_green_light">#ff99cc00</color>

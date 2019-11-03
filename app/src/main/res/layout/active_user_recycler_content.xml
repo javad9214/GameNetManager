@@ -258,9 +258,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:id="@+id/btn_start_pause_user"
-                        android:textColor="#64dd17"
-                        android:background="@android:color/transparent"
-                        android:text="start"/>
+                        style="@style/Widget.MaterialComponents.Button"
+                        android:text="@string/start"/>
                 </LinearLayout>
 
 

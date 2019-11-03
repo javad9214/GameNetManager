@@ -75,9 +75,10 @@
             android:layout_weight="5"
             android:layout_height="wrap_content"
             android:id="@+id/edit_First_name"
-            android:hint="First Name"
+            android:hint="@string/first_name"
             android:backgroundTint="@android:color/transparent"
-            android:layout_gravity="center" />
+            android:layout_gravity="center"
+            android:maxLines="1"/>
 
     </androidx.appcompat.widget.LinearLayoutCompat>
 
@@ -118,9 +119,10 @@
                 android:layout_weight="5"
                 android:layout_height="wrap_content"
                 android:id="@+id/edit_Last_name"
-                android:hint="Last Name"
+                android:hint="@string/last_name"
                 android:backgroundTint="@android:color/transparent"
-                android:layout_gravity="center" />
+                android:layout_gravity="center"
+                android:maxLines="1"/>
 
         </androidx.appcompat.widget.LinearLayoutCompat>
     </androidx.cardview.widget.CardView>
@@ -160,8 +162,9 @@
                 android:layout_weight="5"
                 android:layout_height="wrap_content"
                 android:id="@+id/edit_phone"
-                android:hint="Phone(Optional)"
+                android:hint="@string/phone_optional"
                 android:maxLength="11"
+                android:maxLines="1"
                 android:backgroundTint="@android:color/transparent"
                 android:inputType="number"
                 android:layout_gravity="center" />

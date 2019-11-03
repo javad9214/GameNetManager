@@ -49,6 +49,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.geniusforapp.achievementunlocked.AchievementUnlocked;
 import com.geniusforapp.achievementunlocked.entity.AchievementData;
 import com.geniusforapp.achievementunlocked.viewes.AchievementIconView;
+import com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.navigation.NavigationView;
 import com.western.game.center.westerngamecenter.ActiveUsers.ActiveUsers_Recycler_Adapter;
@@ -78,7 +79,8 @@ public class Main_Active_User_Fragment extends Fragment implements  View.OnClick
 
     private BroadcastReceiver receiver ;
 
-    FloatingActionButton fab  , fab2 ;
+    ExtendedFloatingActionButton fab;
+    FloatingActionButton fab2 ;
     Toolbar toolbar ;
     DrawerLayout drawer ;
     NavigationView navigationView ;
@@ -310,8 +312,8 @@ public class Main_Active_User_Fragment extends Fragment implements  View.OnClick
         });
     }
 
-    public void init(View view){
-        fab = (FloatingActionButton) view.findViewById(R.id.fab_add_active_user);
+    private void init(View view){
+        fab = view.findViewById(R.id.fab_add_active_user);
 
         linearLayout_main_page_empty = (LinearLayout) view.findViewById(R.id.empty_main_page_background);
         toolbar = (Toolbar) view.findViewById(R.id.toolbar);

@@ -184,26 +184,23 @@
             android:gravity="center">
 
 
-            <Button
+            <com.google.android.material.button.MaterialButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginRight="10dp"
-                android:text="Cancel"
-                android:textColor="#fff"
-                android:background="#a30c0e"
-                android:elevation="@dimen/cardview_default_elevation"
-                android:id="@+id/btn_cancel"
-                android:shadowRadius="10" />
+                android:layout_marginEnd="10dp"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:text="@string/cancel"
+                android:id="@+id/btn_cancel"/>
 
 
 
-            <Button
+            <com.google.android.material.button.MaterialButton
                 android:id="@+id/btn_done"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="#12a8ab"
-                android:text="DONE"
-                android:textColor="@color/mb_white"/>
+                android:text="@string/done"
+                android:textColor="@color/white"/>
 
 
 
